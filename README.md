@@ -49,6 +49,8 @@ StudeQ is an **AI powered learning app for Indian students** — a RAG driven st
 | Payments | Razorpay |
 | Hosting | Render |
 
+See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the full system diagram and data flow.
+
 ## Architecture
 
 ```mermaid
@@ -64,9 +66,54 @@ flowchart TD
     B --> J[Groq / NVIDIA NIM LLMs]
 ```
 
-## API Documentation
+## 🚀 Installation
+ 
+```bash
+# Clone
+git clone https://github.com/kanchan-nath/["You will get the access of private repo after consulting in Discord"]
+cd StudeQ
+ 
+# Install server deps
+cd server
+npm install --legacy-peer-deps
+ 
+# Install client deps
+cd ../client
+npm install --legacy-peer-deps
+```
 
-See [`docs/API.md`](docs/API.md) for full endpoint reference.
+### Run locally
+ 
+```bash
+# Terminal 1 — server
+cd server
+npm run dev
+ 
+# Terminal 2 — client
+cd client
+npm run dev
+```
+
+## Environment Variables
+ 
+Create a `.env` file in `server/`:
+ 
+| Variable | Description |
+|---|---|
+| `DATABASE_URL` | Postgres connection string (Session pooler URL on Render) |
+| `MONGO_URI` | MongoDB connection string |
+| `REDIS_URL` | Redis/Upstash connection string |
+| `PINECONE_API_KEY` | Pinecone vector store API key |
+| `GROQ_API_KEY` | Groq LLM API key |
+| `NVIDIA_NIM_API_KEY` | NVIDIA NIM LLM API key |
+| `RAZORPAY_KEY_ID` | Razorpay key ID |
+| `RAZORPAY_KEY_SECRET` | Razorpay secret |
+| `JWT_SECRET` / cookie config | Auth (httpOnly cookie-based) |
+| `CLIENT_URL` | Frontend origin for CORS |
+
+##  API Docs
+ 
+See [`docs/API.md`](docs/API.md) *(coming soon)* for endpoint reference.
 
 ## Roadmap
 
