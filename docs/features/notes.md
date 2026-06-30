@@ -90,8 +90,6 @@ This page already implements:
 - Semantic landmarks (`<main>`, `aria-labelledby` sections, skip link)
 - Accessible FAQ via `<dl>`/`<dt>`/`<dd>` + `aria-expanded`/`aria-controls`
 
-⚠️ **Known issue:** canonical/OG URLs use `studeq.app` and `studeq.onrender.com` inconsistently across the file — pick one production domain and align all instances (canonical, OG, Twitter, JSON-LD `url`/breadcrumbs).
-
 ---
 
 **Related docs:** [README](../README.md) · [ARCHITECTURE](../ARCHITECTURE.md) · [CONTRIBUTING](../CONTRIBUTING.md)
